@@ -1,0 +1,32 @@
+# File handling demonstration in Python
+
+file_name = "sample.txt"
+
+# 1. Writing to a file (this will create or overwrite the file)
+file = open(file_name, "w")
+file.write("Hello, this is the first line.\n")
+file.write("This file is created using Python.\n")
+file.close()  # Properly closing the file
+
+print("File written successfully.\n")
+
+# 2. Reading the file contents
+file = open(file_name, "r")
+content = file.read()
+print("Reading file content:")
+print(content)
+file.close()
+
+# 3. Appending additional content
+file = open(file_name, "a")
+file.write("This line is appended later.\n")
+file.close()
+
+print("\nContent appended successfully.\n")
+
+# 4. Reading again to verify appended content
+file = open(file_name, "r")
+updated_content = file.read()
+print("Updated file content:")
+print(updated_content)
+file.close()
